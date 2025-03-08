@@ -1,12 +1,13 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { GreetingComponent } from './greeting/greeting.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  standalone: true,
+  imports: [RouterOutlet, GreetingComponent],
   template: `
-    <h1>Welcome to {{title}}!</h1>
-
+    <app-greeting name="Angular Elements" greeting="Welcome to"></app-greeting>
     <router-outlet />
   `,
   styles: [],
